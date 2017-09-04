@@ -25,6 +25,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider',  
         templateUrl: 'views/upload.html',
         controller: 'HomeController'
       })
+      .when('/manage', {
+        templateUrl: 'views/manage.html',
+        controller: 'HomeController'
+      })
   		.otherwise('/', {
   			templateUrl: 'views/home.html',
   			controller: 'HomeController'
