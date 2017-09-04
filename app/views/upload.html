@@ -1,0 +1,44 @@
+<section>
+	<div class="container padding-top-100">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="font-35px">
+					<b>Upload</b>
+				</div>
+			<!-- 	<div class="font-24px margin-top-20">
+					You're just one step away from taking advantage of our file sharing service!
+				</div> -->
+			</div>
+			<div class="margin-top-70 col-xs-12 col-sm-12 col-md-12">
+				<div ng-if="progressFlag" class="progress">
+				  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+				  aria-valuenow="{{ progressStatus }}" aria-valuemin="0" aria-valuemax="100" style="width: {{progressStatus}}%">
+				    {{ progressStatus }}% Complete (success)
+				  </div>
+				</div>
+				<div class="input-group background-grey margin-auto width-50per">
+					<div class="input-group-addon">
+						<i class="fa fa-chevron-right">
+
+						</i>
+					</div>
+
+					<input ng-model="filename.name" type="text" class="form-control" placeholder="File input" tabindex="1" uploadfile/>
+                    <input type="file" class="ng-hide" id="file-upload" fileread="filename"/>
+
+				</div>
+				<div class="input-group background-grey margin-auto width-50per">
+					<div class="input-group-addon">
+						<i class="fa fa-chevron-right">
+
+						</i>
+					</div>
+					<input type="text" class="form-control" placeholder="Price" tabindex="1"/>
+				</div>
+				<div class="input-group form-buttons margin-auto width-50per">
+					<button class="singup-submit" type="submit" ng-click="submitUploadedFile()">Upload</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
